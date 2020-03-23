@@ -1,7 +1,7 @@
 		<!-- NAVBAR -->
 		<nav class="navbar navbar-default navbar-fixed-top">
 			<div class="brand">
-				<a href="index.html"><img src="{{asset('admin/assets/img/jolt2.png')}}" alt=" Logo" class="img-responsive logo" style="width:50px"></a>
+				<a href="/ipolt"><img src="{{asset('admin/assets/img/jolt2.png')}}" alt=" Logo" class="img-responsive logo" style="width:50px"></a>
 			</div>
 			<div class="container-fluid">
 				<div class="navbar-btn">
