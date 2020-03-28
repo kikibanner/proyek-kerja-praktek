@@ -1,5 +1,9 @@
 @extends('layouts.master')
 
+@section('ipolt')
+    class="active"
+@endsection
+
 @section('title')
     Edit
 @endsection

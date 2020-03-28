@@ -11,7 +11,7 @@
 					<div class="input-group">
 						<form action="/ipolt" method="GET">
 							<input type="text" value="" name="cari" class="form-control" placeholder="Cari data...">
-							<span class="input-group-btn"><button type="button" class="btn btn-primary">Cari</button></span>
+							<span class="input-group-btn"><button type="submit" class="btn btn-primary">Cari</button></span>
 						</form>
 					</div>
 				</form>

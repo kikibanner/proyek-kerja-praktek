@@ -37,14 +37,7 @@ Route::middleware(['auth','CheckRole:admin'])->group(function(){
 Route::middleware(['auth','CheckRole:admin,user'])->group(function(){
     Route::get('/dashboard','DashboardController@index');
     Route::get('/ipolt','IpoltController@index');
-    Route::get('/ipolt','IpoltController@index');
     Route::get('/ipolt/{id}/detail', 'IpoltController@detail');
-
-    Route::get('/pengaturan', 'UserController@index');
-    Route::post('/pengaturanpost', 'UserController@create');
-    Route::get('/profil/{id}/edit','UserController@edit');
-    Route::post('/profil/{id}/update','UserController@update');
-    Route::get('/profil/{id}/detail', 'userController@detail'); 
 });
 
 

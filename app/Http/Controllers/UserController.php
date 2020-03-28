@@ -23,8 +23,7 @@ class UserController extends Controller
         $user->role = $request->role ;
         $user->remember_token = str_random(60);
         $user->save();
-        
-        $datauser =\App\User::create($request->all());
+    
         return redirect('\pengaturan')->with('success','Berhasil !');
     }
 
@@ -39,6 +38,7 @@ class UserController extends Controller
         $user = \App\User::find($id);
         $password = $request->password;
         $user->password = bcrypt($password);
+        $user->role = $request->role ;
         $user->save();
         $user->update();
         return redirect('\pengaturan')->with('success','Data Berhasil Diperbarui!');

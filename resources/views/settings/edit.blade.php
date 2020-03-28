@@ -1,5 +1,9 @@
 @extends('layouts.master')
 
+@section('manajemen')
+    class="active"
+@endsection
+
 @section('title')
     Edit Profil
 @endsection
@@ -15,7 +19,6 @@
             {{ session('success') }}
         </div>
         @endif
- 
                 <form action="/profil/{{ $user->id }}/update" method="POST">
                 {{ csrf_field() }}
                     <div class="form-group">
@@ -27,8 +30,12 @@
                         <input type="email" class="form-control" name="email" placeholder="Masukkan e-Mail (Wajib Diisi)" value="{{ $user->email }}">
                     </div>
                     <div class="form-group">
+                        <label for="exampleInputEmail1">role</label>
+                        <input type="text" class="form-control" name="role" placeholder="Masukkan Nama (Wajib Diisi)">
+                    </div>
+                    <div class="form-group">
                         <label for="exampleInputEmail1">Password Jolt</label>
-                        <input type="password" class="form-control" name="password" placeholder="Masukkan Password (Wajib Diisi)" >
+                        <input type="password" class="form-control" name="password" placeholder="Masukkan Password (Wajib Diisi)" required>
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Username TACACS</label>

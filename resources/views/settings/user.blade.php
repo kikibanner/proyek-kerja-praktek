@@ -1,8 +1,14 @@
 @extends('layouts.master')
 
+@section('manajemen')
+    class="active"
+@endsection
+
 @section('title')
     Pengaturan Pengguna
 @endsection
+
+
 
 @section('content')
 <div class="row">

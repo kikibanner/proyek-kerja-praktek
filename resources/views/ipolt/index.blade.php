@@ -1,5 +1,9 @@
 @extends('layouts.master')
 
+@section('ipolt')
+    class="active"
+@endsection
+
 @section('title')
     Daftar OLT
 @endsection
@@ -81,23 +85,23 @@
                     {{ csrf_field() }}
                         <div class="form-group">
                             <label for="exampleInputEmail1">STO</label>
-                            <input type="text" class="form-control" name="sto" placeholder="Masukkan STO (Wajib Diisi)">
+                            <input type="text" class="form-control" name="sto" placeholder="Masukkan STO (Wajib Diisi)" required> 
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Merk</label>
-                            <input type="text" class="form-control" name="merk" placeholder="Masukkan Merk (Wajib Diisi)">
+                            <input type="text" class="form-control" name="merk" placeholder="Masukkan Merk (Wajib Diisi)"required>
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Type</label>
-                            <input type="text" class="form-control" name="type" placeholder="Masukkan Type (Wajib Diisi)">
+                            <input type="text" class="form-control" name="type" placeholder="Masukkan Type (Wajib Diisi)"required>
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Hostname</label>
-                            <input type="text" class="form-control" name="hostname" placeholder="Masukkan Hostname (Wajib Diisi)">
+                            <input type="text" class="form-control" name="hostname" placeholder="Masukkan Hostname (Wajib Diisi)"required>
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">IP OAM</label>
-                            <input type="text" class="form-control" name="ip_oam" placeholder="Masukkan IP OAM (Wajib Diisi)">
+                            <input type="text" class="form-control" name="ip_oam" placeholder="Masukkan IP OAM (Wajib Diisi)"required>
                         </div>
                         <div class="form-group">
                             <label for="exampleInputEmail1">Metro</label>

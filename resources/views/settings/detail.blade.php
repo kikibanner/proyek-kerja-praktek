@@ -1,5 +1,9 @@
 @extends('layouts.master')
 
+@section('manajemen')
+    class="active"
+@endsection
+
 @section('title')
     Detail
 @endsection

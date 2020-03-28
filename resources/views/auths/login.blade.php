@@ -30,7 +30,11 @@
 					<div class="left">
 						<div class="content">
 							<div class="header">
-								<div class="logo text-center"><img src="{{asset('admin/assets/img/jolt.png')}}" alt="Klorofil Logo"></div>
+								<div class="logo text-center">
+									<div class="row" style="margin-top:30px">
+										<img src="{{asset('admin/assets/img/jolt.png')}}" >
+									</div>
+								</div>
 								<p class="lead">Silaken Masoek</p>
 							</div>
                             <form class="form-auth-small" action="/postlogin" method="POST">
@@ -53,6 +57,12 @@
 								<!-- <div class="bottom">
 									<span class="helper-text"><i class="fa fa-lock"></i> <a href="#">Forgot password?</a></span>
 								</div> -->
+								<div class="logo text-center">
+									<div class="row" style="margin-top:10px; margin-bottom:10px">
+										<span><img src="{{asset('admin/assets/img/pens.png')}}" style="height:50px; margin-right:25px" >
+										<img src="{{asset('admin/assets/img/ta.jpg')}}" style="height:80px; margin-left:25px" ></span>
+									</div>
+								</div>
 							</form>
 						</div>
 					</div>

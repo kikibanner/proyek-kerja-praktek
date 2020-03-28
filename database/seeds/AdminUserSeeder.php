@@ -19,6 +19,12 @@ class AdminUserSeeder extends Seeder
             'password' => bcrypt('jolt'),
         ]);
         User::create([
+            'name' => 'Admin2',
+            'email' => 'admin2@jolt.com',
+            'role' => 'admin',
+            'password' => bcrypt('jolt'),
+        ]);
+        User::create([
             'name' => 'User',
             'email' => 'user@jolt.com',
             'role' => 'user',
