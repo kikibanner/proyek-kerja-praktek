@@ -8,6 +8,7 @@ class IpoltController extends Controller
 {
     public function index(Request $request)
     {
+
         if($request->has('cari'))
         {
             $ipolt = \App\Ipolt::where('sto','LIKE','%'.$request->cari.'%')

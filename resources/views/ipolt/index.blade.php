@@ -27,7 +27,7 @@
                 <!-- /TAMBAH DATA -->
                 <br>
                 <br>
-                <table class="table table-hover">
+                <table class="table table-hover" id="example">
                     <thead>
                         <tr>
                             <th>No.</th>
@@ -69,6 +69,8 @@
         </div>
     </div>
 </div>
+
+
 
 <!-- Modal Tambah Data -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
