@@ -45,9 +45,14 @@
                             <td>{{ $profil->email }}</td>
                             <td>{{ $profil->role }}</td>
                             <td>
+                            @if($profil->role=='user')
                                 <a href="/profil/{{$profil->id}}/detail" class="btn btn-sm btn-info"><i class="lnr lnr-eye"></i></a>
                                 <a href="/profil/{{$profil->id}}/edit" class="btn btn-sm btn-warning"><i class="lnr lnr-cog"></i></a>
                                 <a href="/profil/{{$profil->id}}/delete" class="btn btn-sm btn-danger" onclick="return confirm('Yakin mau dihapus?')"><i class="lnr lnr-trash"></i></a>
+                            @else
+                                <a href="/profil/{{$profil->id}}/detail" class="btn btn-sm btn-info"><i class="lnr lnr-eye"></i></a>
+                                <a href="/profil/{{$profil->id}}/edit" class="btn btn-sm btn-warning"><i class="lnr lnr-cog"></i></a>
+                            @endif
                             </td>
                         </tr>
                         @endforeach
