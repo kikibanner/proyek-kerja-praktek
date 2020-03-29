@@ -30,8 +30,16 @@
                         <input type="email" class="form-control" name="email" placeholder="Masukkan e-Mail (Wajib Diisi)" value="{{ $user->email }}">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">role</label>
-                        <input type="text" class="form-control" name="role" placeholder="Masukkan Nama (Wajib Diisi)">
+                        <label for="exampleFormControlSelect1">Role</label>
+                        <select class="form-control" name="role" id="exampleFormControlSelect1">
+                            @if($user=='admin')
+                            <option value="admin">Admin</option>
+                            <option value="user">User</option>
+                            @else
+                            <option value="user">User</option>
+                            <option value="admin">Admin</option>
+                            @endif
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">Password Jolt</label>
