@@ -46,7 +46,9 @@
                                     <li>Id Telegram<span>{{$user->id_telegram}}</span></li>
                                 </ul>
                             </div>
+                            @if(auth()->user()->role=='admin' || auth()->user()->id == auth()->user()->id )
                             <div class="text-center"><a href="/profil/{{auth()->user()->id}}/edit" class="btn btn-warning">Edit</a></div>
+                            @endif
                         </div>
                         <!-- END PROFILE DETAIL -->
                     </div>

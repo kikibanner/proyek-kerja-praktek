@@ -39,7 +39,8 @@ Route::middleware(['auth','CheckRole:admin,user'])->group(function(){
     Route::get('/ipolt','IpoltController@index');
     Route::get('/ipolt/{id}/detail', 'IpoltController@detail');
 
-    Route::get('/profil/{auth()->user()->id}/detail', 'UserController@detail'); 
+    Route::get('/profil/{id}/detail', 'UserController@detail'); 
+    Route::get('/profil/{id}/edit','UserController@edit');
 });
 
 

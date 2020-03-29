@@ -9,6 +9,7 @@
 @endsection
 
 @section('content')
+@if(auth()->user()->role =='admin' || auth()->user()->id == $user->id  )
 <div class="panel">
     <div class="panel-heading">
         <h3 class="panel-title">Edit Data</h3>
@@ -68,6 +69,11 @@
 
     </div>
 </div>
+@else
+<div class="panel">
+    Selain admin, anda hanya bisa mengedit profil anda sendiri
+</div>
+@endif
 @endsection
 
 @section('content1')
