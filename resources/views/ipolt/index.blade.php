@@ -20,17 +20,20 @@
             <div class="panel-body">
                 <!-- TAMBAH DATA -->
                 @if(auth()->user()->role=='admin')
-                <button type="button" class="btn btn-success btn-sm " data-toggle="modal" data-target="#exampleModal">
-                    + Tambah Data
+                <button type="button" class="btn btn-success " data-toggle="modal" data-target="#exampleModal">
+                    + Tambah Data Manual
+                </button>
+                <button type="button" class="btn btn-success " data-toggle="modal" data-target="#exampleModal">
+                    + Tambah Data Dengan Excel
                 </button>
                 @endif
                 <!-- /TAMBAH DATA -->
                 <br>
                 <br>
-                <table class="table table-hover" id="example">
+                <table class="table table-striped table-bordered" id="example">
                     <thead>
                         <tr>
-                            <th hidden>No.</th>
+                            <th >No.</th>
                             <th>STO</th>
                             <th>Merk</th>
                             <th>Type</th>
@@ -46,7 +49,7 @@
                     <tbody>
                         @foreach($ipolt as $ip)
                         <tr>
-                            <td hidden>{{ $loop->iteration  }}</td>
+                            <td >{{ $loop->iteration  }}</td>
                             <td>{{ $ip->sto }}</td>
                             <td>{{ $ip->merk }}</td>
                             <td>{{ $ip->type }}</td>
@@ -67,7 +70,7 @@
                     <tfoot>
                         <tr>
                             <td hidden></th>
-                            <th class="panel bg-warning">Filter STO : </th>
+                            <th class="panel bg-danger"><div style="color:white">STO :</div><div style="margin-top:5px"></div> </th>
                             <th hidden>Merk</th>
                             <th hidden>Type</th>
                             <th hidden>Hostname</th>
