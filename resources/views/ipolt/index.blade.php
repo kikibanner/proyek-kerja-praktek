@@ -30,7 +30,7 @@
                 <table class="table table-hover" id="example">
                     <thead>
                         <tr>
-                            <th>No.</th>
+                            <th hidden>No.</th>
                             <th>STO</th>
                             <th>Merk</th>
                             <th>Type</th>
@@ -46,7 +46,7 @@
                     <tbody>
                         @foreach($ipolt as $ip)
                         <tr>
-                            <td>{{ $loop->iteration  }}</td>
+                            <td hidden>{{ $loop->iteration  }}</td>
                             <td>{{ $ip->sto }}</td>
                             <td>{{ $ip->merk }}</td>
                             <td>{{ $ip->type }}</td>
@@ -64,6 +64,16 @@
                         </tr>
                         @endforeach
                     </tbody>
+                    <tfoot>
+                        <tr>
+                            <td hidden></th>
+                            <th class="panel bg-warning">Filter STO : </th>
+                            <th hidden>Merk</th>
+                            <th hidden>Type</th>
+                            <th hidden>Hostname</th>
+                            <th hidden>IP OAM</th>
+                        </tr>
+                    </tfoot>
                 </table>
             </div>
         </div>
