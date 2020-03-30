@@ -23,8 +23,11 @@
                 <button type="button" class="btn btn-success " data-toggle="modal" data-target="#exampleModal">
                     + Tambah Data Manual
                 </button>
-                <button type="button" class="btn btn-success " data-toggle="modal" data-target="#exampleModal">
+                <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#exampleModal" style="margin-left: 10px; display:">
                     + Tambah Data Dengan Excel
+                </button>
+                <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#exampleModal" style="margin-left: 10px; display:">
+                    Eksport Data ke Excel
                 </button>
                 @endif
                 <!-- /TAMBAH DATA -->
