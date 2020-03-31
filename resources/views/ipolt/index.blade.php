@@ -23,10 +23,10 @@
                 <button type="button" class="btn btn-success " data-toggle="modal" data-target="#exampleModal">
                     + Tambah Data Manual
                 </button>
-                <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#exampleModal" style="margin-left: 10px; display:">
+                <button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#exampleModal" style="margin-left: 10px; display:none">
                     + Tambah Data Dengan Excel
                 </button>
-                <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#exampleModal" style="margin-left: 10px; display:">
+                <button type="button" class="btn btn-warning btn-sm" data-toggle="modal" data-target="#exampleModal" style="margin-left: 10px; display:none">
                     Eksport Data ke Excel
                 </button>
                 @endif
@@ -150,5 +150,34 @@
             </div>
         </div>
     </div>
-    <!-- /Modal Tambah Data -->
+<!-- /Modal Tambah Data -->
+@endsection
+
+@section('scriptipolt')
+<script>
+		$(document).ready(function() {
+			$('#example').DataTable( {
+				initComplete: function () {
+					this.api().columns().every( function () {
+						var column = this;
+						var select = $('<select><option value=""></option></select>')
+							.appendTo( $(column.footer()) )
+							.on( 'change', function () {
+								var val = $.fn.dataTable.util.escapeRegex(
+									$(this).val()
+								);
+		
+								column
+									.search( val ? '^'+val+'$' : '', true, false )
+									.draw();
+							} );
+		
+						column.data().unique().sort().each( function ( d, j ) {
+							select.append( '<option value="'+d+'">'+d+'</option>' )
+						} );
+					} );
+				}
+			} );
+		} );
+	</script>
 @endsection

@@ -15,7 +15,8 @@ Route::get('/','AuthController@login')->name('ndasmu');
 
 Route::get('/login','AuthController@login')->name('login');
 Route::post('postlogin','AuthController@postlogin');
-Route::get('logout','AuthCOntroller@logout');
+Route::get('logout','AuthController@logout');
+
 
 Route::middleware(['auth','CheckRole:admin'])->group(function(){
     Route::get('/dashboard','DashboardController@index');
@@ -31,7 +32,9 @@ Route::middleware(['auth','CheckRole:admin'])->group(function(){
     Route::get('/profil/{id}/edit','UserController@edit');
     Route::post('/profil/{id}/update','UserController@update');
     Route::get('/profil/{id}/delete','UserController@delete');
-    Route::get('/profil/{id}/detail', 'UserController@detail');    
+    Route::get('/profil/{id}/detail', 'UserController@detail');
+    
+    Route::resource('ajaxuncfg','UncfgController');
 });
 
 Route::middleware(['auth','CheckRole:admin,user'])->group(function(){
@@ -41,6 +44,8 @@ Route::middleware(['auth','CheckRole:admin,user'])->group(function(){
 
     Route::get('/profil/{id}/detail', 'UserController@detail'); 
     Route::get('/profil/{id}/edit','UserController@edit');
+
+    Route::resource('ajaxuncfg','UncfgController');
 });
 
 

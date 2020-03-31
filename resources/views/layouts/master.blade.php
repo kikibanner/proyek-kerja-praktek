@@ -21,6 +21,7 @@
 	<link rel="apple-touch-icon" sizes="76x76" href="{{asset('admin/assets/img/jolt-icon.png')}}">
 	<link rel="icon" type="image/png" sizes="96x96" href="{{asset('admin/assets/img/jolt-icon.png')}}">
 	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
+	@yield('head')
 </head>
 
 <body>
@@ -39,6 +40,7 @@
 		<!-- END MAIN -->
 		<div class="clearfix"></div>
 	</div>
+	
 	<!-- END WRAPPER -->
 	<!-- Javascript -->
 	<script src="{{asset('admin/assets/vendor/jquery/jquery.min.js')}}"></script>
@@ -48,32 +50,8 @@
 
 	<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
 
-	<script>
-		$(document).ready(function() {
-			$('#example').DataTable( {
-				initComplete: function () {
-					this.api().columns().every( function () {
-						var column = this;
-						var select = $('<select><option value=""></option></select>')
-							.appendTo( $(column.footer()) )
-							.on( 'change', function () {
-								var val = $.fn.dataTable.util.escapeRegex(
-									$(this).val()
-								);
-		
-								column
-									.search( val ? '^'+val+'$' : '', true, false )
-									.draw();
-							} );
-		
-						column.data().unique().sort().each( function ( d, j ) {
-							select.append( '<option value="'+d+'">'+d+'</option>' )
-						} );
-					} );
-				}
-			} );
-		} );
-	</script>
+	@yield('scriptipolt')
 </body>
+@yield('script')
 
 </html>
