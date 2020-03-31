@@ -24,12 +24,12 @@
             </div>
             <div class="panel-body">
 
-                <form action="" method="GET" class="navbar-form navbar-left">
+                <form action="/ipolt" method="GET" class="navbar-form navbar-left">
                     <div class="form-group">
                     <label for="exampleFormControlSelect1"><b>STO : </b></label>
                         <select class="form-control" id="exampleFormControlSelect1">
                         @foreach($ipolt as $ip)
-                        <option>{{$ip->sto}}</option>
+                        <option value="">{{$ip->sto}} {{$ip->sto}}</option>
                         @endforeach
                         </select>
                         <button type="submit" class="btn btn-success">Cari</button>
