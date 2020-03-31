@@ -48,7 +48,7 @@
                             <th>Hostname OLT</th>
                             <th>F/S/P</th>
                             <th>SN</th>
-                            <th width="280px">Action</th>
+                            <th width="280px" style="display:none">Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -121,7 +121,7 @@
             {data: 'hostname_olt', name: 'hostname_olt'},
             {data: 'fsp', name: 'fsp'},
             {data: 'sn', name: 'sn'},
-            {data: 'action', name: 'action', orderable: false, searchable: false},
+            //{data: 'action', name: 'action', orderable: false, searchable: false},
         ]
     });
      
