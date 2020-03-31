@@ -9,8 +9,7 @@
 @endsection
 
 @section('head')
-    <title>Ajax CRUD</title>
-    <meta name="csrf-token" content="{{ csrf_token() }}">s
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 @endsection
 
 
@@ -62,90 +61,44 @@
 
 <!-- Modal Tambah Data -->
 <div class="modal fade" id="ajaxModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Tambah Data OLT</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form id="uncfgForm" name="uncfgForm" >
-                        <input type="hidden" name="id" id="id">
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">IP STO</label>
-                            <input type="text" class="form-control" id="ip_olt" name="ip_olt" placeholder="Enter " value="" maxlength="50" required="">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">HOSTNAME STO</label>
-                            <input type="text" class="form-control" id="hostname_olt" name="hostname_olt" placeholder="Enter " value="" maxlength="50" required="">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">F/S/P</label>
-                            <input type="text" class="form-control" id="fsp" name="fsp" placeholder="Enter " value="" maxlength="50" required="">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Serial Number</label>
-                            <input type="text" class="form-control" id="sn" name="sn" placeholder="Enter " value="" maxlength="50" required="">
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-                    <button type="submit" class="btn btn-primary"  id="saveBtn" value="create">Simpan</button>
-                </div>
-                </form>
-            </div>
-        </div>
-    </div>
-<!-- /Modal Tambah Data -->
-
-
-<div class="modal fade"  aria-hidden="true"  tabindex="-1" role="dialog">
-    <div class="modal-dialog">
+    <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="modelHeading"></h4>
+                <h5 class="modal-title" id="exampleModalLabel">Tambah Data OLT</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
             </div>
             <div class="modal-body">
                 <form id="uncfgForm" name="uncfgForm" >
-                   <input type="hidden" name="id" id="id">
+                    <input type="hidden" name="id" id="id">
                     <div class="form-group">
-                        <label >IP OLT</label>
-                            <input type="text" class="form-control" id="ip_olt" name="ip_olt" placeholder="Enter " value="" maxlength="50" required="">
+                        <label for="exampleInputEmail1">IP STO</label>
+                        <input type="text" class="form-control" id="ip_olt" name="ip_olt" placeholder="Enter " value="" maxlength="50" required="">
                     </div>
-
                     <div class="form-group">
-                        <label for="hostname_olt" class="col-sm-2 control-label">Hostname OLT</label>
-                        <div class="col-sm-12">
-                            <input type="text" class="form-control" id="hostname_olt" name="hostname_olt" placeholder="Enter " value="" maxlength="50" required="">
-                        </div>
+                        <label for="exampleInputEmail1">HOSTNAME STO</label>
+                        <input type="text" class="form-control" id="hostname_olt" name="hostname_olt" placeholder="Enter " value="" maxlength="50" required="">
                     </div>
-
                     <div class="form-group">
-                        <label for="fsp" class="col-sm-2 control-label">F/S/P</label>
-                        <div class="col-sm-12">
-                            <input type="text" class="form-control" id="fsp" name="fsp" placeholder="Enter " value="" maxlength="50" required="">
-                        </div>
+                        <label for="exampleInputEmail1">F/S/P</label>
+                        <input type="text" class="form-control" id="fsp" name="fsp" placeholder="Enter " value="" maxlength="50" required="">
                     </div>
-
                     <div class="form-group">
-                        <label for="sn" class="col-sm-2 control-label">Serial Number</label>
-                        <div class="col-sm-12">
-                            <input type="text" class="form-control" id="sn" name="sn" placeholder="Enter " value="" maxlength="50" required="">
-                        </div>
-                    </div>
-      
-                    <div class="col-sm-offset-2 col-sm-10">
-                     <button type="submit" class="btn btn-primary" id="saveBtn" value="create">Save changes
-                     </button>
+                        <label for="exampleInputEmail1">Serial Number</label>
+                        <input type="text" class="form-control" id="sn" name="sn" placeholder="Enter " value="" maxlength="50" required="">
                     </div>
                 </form>
             </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
+                <button type="submit" class="btn btn-primary"  id="saveBtn" value="create">Simpan</button>
+            </div>
+            </form>
         </div>
     </div>
 </div>
+<!-- /Modal Tambah Data -->
 @endsection
 
 @section('script')
